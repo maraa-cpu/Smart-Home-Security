@@ -48,8 +48,8 @@ QR code per avviare il bot Telegram dedicato alla gestione dell'antifurto.
 
 ## Team
 Questo progetto è stato ideato, progettato e sviluppato da:
-* **Dana Iannaccone** - [GitHub]()
+* **Dana Iannaccone** - [GitHub](https://github.com/danaiannaccone)
 * **Mara Mariano** - [GitHub](https://github.com/maraa-cpu)
-* **Vincenzo Galdiero** - [GitHub]()
+* **Vincenzo Galdiero** - [GitHub](https://github.com/vincenzogaldiero)
 
 
