@@ -1,14 +1,15 @@
 # Smart-Home-Security
-Il sistema di antifurto è gestito tramite un tastierino numerico per l’inserimento del codice e la selezione della modalità. In modalità giorno, l’attivazione prevede un tempo di uscita per l’allontanamento dell’utente, al termine del quale si attivano tutti i sensori; in caso di intrusione, un tempo di ingresso consente il disinserimento, ma l'allarme scatta dopo due tentativi errati o mancati. In modalità notte, il sistema chiude automaticamente la tenda e attiva i soli sensori perimetrali senza alcun tempo di ingresso, provocando l'allarme immediato a ogni evento sospetto; al disinserimento, la tenda viene riaperta. Tutti i dati sono trasmessi via MQTT a Node-RED, che archivia gli eventi con timestamp per scopi statistici e fornisce una dashboard di monitoraggio. Il sistema supporta il controllo remoto e l’invio di notifiche istantanee tramite un bot Telegram.
+Sistema antifurto IoT basato su ESP32 e MicroPython. Il progetto permette il monitoraggio e la gestione automatizzata della sicurezza domestica attraverso un'architettura ibrida (locale e remota), integrando sensori fisici, dashboard web e notifiche mobile.
 
 ## Demo
-https://www.youtube.com/watch?v=zn8M-5acVwQ&t=3s
+https://www.youtube.com/watch?v=zn8M-5acVwQ
 
 ## Funzionalità Principali
-* Gestione locale del sistema tramite tastierino numerico, che consente all'utente di inserire il codice e selezionare la modalità di funzionamento.
-* Modalità Giorno con gestione dei ritardi: dopo l'inserimento del codice, il sistema avvia un tempo di uscita di 20 secondi per consentire l'allontanamento dell'utente prima dell'attivazione effettiva dell'antifurto e dei sensori.
-* Interfaccia grafica completa per il controllo del sistema tramite dashboard, strutturata nelle sezioni principali "Security Hub" e "Log & Grafici".
-* Trasmissione dei dati e avvisi da remoto tramite l'integrazione di un bot Telegram che invia notifiche push in tempo reale.
+* **Gestione locale tramite tastierino:** L'utente può inserire il codice di sicurezza e selezionare la modalità di funzionamento direttamente dal tastierino numerico.
+* **Modalità Giorno:** Prevede un tempo di uscita (20 secondi) per consentire l'allontanamento dell'utente. In caso di intrusione, un tempo di ingresso permette il disinserimento; l'allarme scatta dopo due tentativi di codice errati o mancati.
+* **Modalità Notte:** Attiva i soli sensori perimetrali e chiude automaticamente la tenda. Non prevede tempi di ingresso, provocando un allarme immediato a ogni evento sospetto. Al disinserimento, la tenda viene riaperta.
+* **Dashboard di monitoraggio:** Tutti i dati sono trasmessi via MQTT a Node-RED, che archivia gli eventi con timestamp per scopi statistici e fornisce un'interfaccia grafica divisa in "Security Hub" e "Log & Grafici".
+* **Gestione remota via Telegram:** Integrazione di un bot Telegram per il controllo remoto del sistema e l'invio di notifiche push istantanee in caso di allarme o cambio di stato.
 
 
 ## Architettura del Sistema
