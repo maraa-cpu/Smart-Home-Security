@@ -41,7 +41,7 @@ Il sistema utilizza una scheda ESP32 a cui sono collegati i seguenti dispositivi
 </p>
 
 ## Bot Telegram
-Scansiona il QR code qui sotto con il tuo smartphone per avviare il bot Telegram dedicato alla gestione dell'antifurto.
+QR code per avviare il bot Telegram dedicato alla gestione dell'antifurto.
 <p align="center">
   <img width="200" alt="QR Code Bot Telegram" src="https://github.com/user-attachments/assets/dde58dd8-fda8-457d-9f78-6b4ee349b6dc" />
 </p>
