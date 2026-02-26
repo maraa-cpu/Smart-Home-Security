@@ -1,0 +1,1729 @@
+[
+    {
+        "id": "02b90a95fb708b01",
+        "type": "tab",
+        "label": "🛡️ MONITOR LIVE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ba047f83c3e4f540",
+        "type": "tab",
+        "label": "📊 STORICO DATI",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "555b57a316896058",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "71452e6a2131cdc6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#1c695c",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#1c695c",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#1c695c",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#2ca591",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#1c695c",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "security_db",
+        "type": "sqlitedb",
+        "db": "/Users/maramariano/.node-red/security.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "6dc10ac1d10afbe3",
+        "type": "ui_tab",
+        "name": "Log & Grafici",
+        "icon": "show_chart",
+        "order": 2
+    },
+    {
+        "id": "9dc58b3e2fe5aaec",
+        "type": "ui_tab",
+        "name": "Security Hub",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "34461087d74ea24f",
+        "type": "telegram bot",
+        "botname": "smart_home_security_iot_bot",
+        "usernames": "6062141831",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "97b852d6b07e7b1d",
+        "type": "ui_group",
+        "name": "Registro Storico",
+        "tab": "6dc10ac1d10afbe3",
+        "order": 2,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "107e4c7cccb1381e",
+        "type": "ui_group",
+        "name": "Pannello Comandi",
+        "tab": "9dc58b3e2fe5aaec",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bbc1887405f03dfd",
+        "type": "ui_group",
+        "name": "Telemetria",
+        "tab": "9dc58b3e2fe5aaec",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bf2b8ec2e741bfef",
+        "type": "ui_group",
+        "name": "Criticità e Sensori",
+        "tab": "6dc10ac1d10afbe3",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "301a06f0c7c19d41",
+        "type": "ui_group",
+        "name": "Calibrazione",
+        "tab": "9dc58b3e2fe5aaec",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f056c1e4cd611e29",
+        "type": "ui_group",
+        "name": "Gestione Tenda",
+        "tab": "9dc58b3e2fe5aaec",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d72aed64caac9e36",
+        "type": "ui_group",
+        "name": "Statistiche Modalità",
+        "tab": "6dc10ac1d10afbe3",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "65044de34a724538",
+        "type": "ui_spacer",
+        "z": "02b90a95fb708b01",
+        "name": "spacer",
+        "group": "f056c1e4cd611e29",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0d388e8f08843bc9",
+        "type": "ui_button",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "107e4c7cccb1381e",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "TOTAL",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-lock",
+        "payload": "TOTAL",
+        "payloadType": "str",
+        "topic": "ui/control/mode",
+        "topicType": "str",
+        "x": 230,
+        "y": 60,
+        "wires": [
+            [
+                "845be5779e774015"
+            ]
+        ]
+    },
+    {
+        "id": "e9cbfae1ea86f68d",
+        "type": "ui_button",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "107e4c7cccb1381e",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "NIGHT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "fa-moon-o",
+        "payload": "NIGHT",
+        "payloadType": "str",
+        "topic": "ui/control/mode",
+        "topicType": "str",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "845be5779e774015"
+            ]
+        ]
+    },
+    {
+        "id": "e633232808a428d2",
+        "type": "mqtt in",
+        "z": "02b90a95fb708b01",
+        "name": "Accel In",
+        "topic": " casa/caveau/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "555b57a316896058",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "845be5779e774015"
+            ]
+        ]
+    },
+    {
+        "id": "fa9b351870671b42",
+        "type": "mqtt in",
+        "z": "02b90a95fb708b01",
+        "name": "PIR In",
+        "topic": "casa/caveau/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "555b57a316896058",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "845be5779e774015"
+            ]
+        ]
+    },
+    {
+        "id": "845be5779e774015",
+        "type": "function",
+        "z": "02b90a95fb708b01",
+        "name": "Cervello ",
+        "func": "// Recupero stati\nvar mode = context.get('mode') || 'DISARMED';\nvar alarmActive = flow.get('alarmActive') || false;\n\n// 1. NORMALIZZAZIONE (Telegram o Dashboard)\nvar input = msg.payload.toString().toUpperCase();\nif (input === \"DISARMED\" || input === \"TOTAL\" || input === \"NIGHT\" || input === \"/DISARMED\" || input === \"/TOTAL\" || input === \"/NIGHT\") {\n    // Rimuove la slash se presente (per comandi Telegram)\n    msg.payload = input.replace(\"/\", \"\");\n    msg.topic = \"ui/control/mode\";\n}\n\n// 2. RESET SISTEMA\nif (msg.topic === \"reset_allarme\" || msg.payload === \"/RESET\") {\n    flow.set('alarmActive', false);\n    global.set('pendingAlarm', null);\n    node.status({ fill: \"grey\", shape: \"dot\", text: \"Stato: PRONTO\" });\n    return [\n        { payload: \"SISTEMA PRONTO\" }, \n        { payload: \"disarmed\", topic: 'casa/caveau/cmd' }, \n        null, \n        { payload: \"✅ Sistema Resettato via Telegram\" }\n    ];\n}\n\n// 3. GESTIONE COMANDI (Cambio Modalità)\nif (msg.topic === 'ui/control/mode') {\n    var selectedMode = msg.payload.toUpperCase();\n    var cmdMQTT = selectedMode.toLowerCase();\n    \n    context.set('mode', selectedMode);\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Modo: \" + selectedMode });\n\n    // Gestione Tenda\n    var tendaState = (selectedMode === \"DISARMED\") ? \"aperta\" : \"chiusa\";\n\n    return [\n        { payload: selectedMode }, // Verso Dashboard\n        { payload: cmdMQTT, topic: 'casa/caveau/cmd' }, // Verso ESP32\n        null, // Verso Sirena (null qui)\n        { payload: \"Settato modo: \" + selectedMode }, // Verso Telegram\n        { topic: \"casa/caveau/telemetry/tenda\", payload: tendaState } // Verso Tenda\n    ];\n}\n\n// 4. GESTIONE DATI DA HARDWARE (Allarmi)\nif (msg.topic === 'casa/caveau/status') {\n    var hwStatus = msg.payload.toString().toUpperCase();\n\n    if (hwStatus.startsWith(\"ALLARME\")) {\n        flow.set('alarmActive', true);\n        var sensorName = hwStatus.split(\"_\")[1] || \"GENERICO\";\n\n        node.status({ fill: \"red\", shape: \"dot\", text: \"🚨 ALLARME: \" + sensorName });\n        \n        return [\n            { payload: \"🚨 \" + sensorName + \"! 🚨\" }, \n            null,\n            { payload: 'SIREN', topic: 'home/buzzer' },\n            { payload: \"⚠️ ALLARME \" + sensorName + \" in modalità \" + mode }\n        ];\n    }\n    \n    // Stato normale da HW\n    context.set('mode', hwStatus);\n    node.status({ fill: \"blue\", shape: \"dot\", text: \"Stato HW: \" + hwStatus });\n    return [{ payload: hwStatus }, null, null, null];\n}\n\nreturn null;",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "93f126783b483af6",
+                "3ad0ad4b44d9ba6b"
+            ],
+            [
+                "71c7099e8f90aafc"
+            ],
+            [],
+            [
+                "05df221ec881c1f2",
+                "a991286fb6854db7"
+            ]
+        ]
+    },
+    {
+        "id": "3ad0ad4b44d9ba6b",
+        "type": "ui_text",
+        "z": "02b90a95fb708b01",
+        "group": "107e4c7cccb1381e",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Stato Sistema:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1060,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "71c7099e8f90aafc",
+        "type": "mqtt out",
+        "z": "02b90a95fb708b01",
+        "name": "ESP32 Out",
+        "topic": "casa/caveau/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "555b57a316896058",
+        "x": 890,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1550eddffab28dfb",
+        "type": "telegram sender",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "bot": "34461087d74ea24f",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1040,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05df221ec881c1f2",
+        "type": "function",
+        "z": "02b90a95fb708b01",
+        "name": "formatta telegram",
+        "func": "var contenuto = msg.payload.payload;\n\nmsg.payload = {\n    chatId: 6062141831,\n    type: 'message',\n    content: contenuto\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 280,
+        "wires": [
+            [
+                "1550eddffab28dfb"
+            ]
+        ]
+    },
+    {
+        "id": "0eb0c04ceaddb399",
+        "type": "ui_button",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "107e4c7cccb1381e",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "DISARMED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "fa-unlock",
+        "payload": "DISARMED",
+        "payloadType": "str",
+        "topic": "ui/control/mode",
+        "topicType": "str",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "845be5779e774015"
+            ]
+        ]
+    },
+    {
+        "id": "93f126783b483af6",
+        "type": "ui_toast",
+        "z": "02b90a95fb708b01",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 950,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a991286fb6854db7",
+        "type": "function",
+        "z": "02b90a95fb708b01",
+        "name": "formatta tab",
+        "func": "// Recupero dello storico esistente o creazione di uno nuovo se è vuoto\nvar history = context.get('history') || [];\n\n// Creazione oggetto per la riga della tabella\nvar newEntry = {\n    \"Data/Ora\": new Date().toLocaleTimeString('it-IT'),\n    \"Evento\": msg.payload.payload,\n    \"Sensore\": msg.payload.sensor,\n    \"Modalità\": msg.payload.mode\n};\n\n// Aggiunta nuovo allarme in cima alla lista\nhistory.unshift(newEntry);\n\n// Solo gli ultimi 25 allarmi per non rallentare la pagina\nif (history.length > 25) {\n    history.pop();\n}\n\n// Salvataggio\ncontext.set('history', history);\n\n// Invio dell'array alla tabella\nmsg.payload = history;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af0bdbc4e08ad844",
+        "type": "telegram receiver",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "bot": "34461087d74ea24f",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 80,
+        "y": 460,
+        "wires": [
+            [
+                "b6c06f9ea6e6d157"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b6c06f9ea6e6d157",
+        "type": "switch",
+        "z": "02b90a95fb708b01",
+        "name": "traduttore",
+        "property": "payload.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "total",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "night",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "disarmed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "open",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "close",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 80,
+        "y": 120,
+        "wires": [
+            [
+                "0d388e8f08843bc9",
+                "845be5779e774015"
+            ],
+            [
+                "e9cbfae1ea86f68d",
+                "845be5779e774015"
+            ],
+            [
+                "0eb0c04ceaddb399",
+                "845be5779e774015"
+            ],
+            [
+                "7dd883fbb3932790"
+            ],
+            [
+                "59a21e4ed5edca99"
+            ]
+        ]
+    },
+    {
+        "id": "17b106b1f3907235",
+        "type": "ui_dropdown",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "label": "Classifica questo evento",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "107e4c7cccb1381e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Falso allarme",
+                "value": "FALSO",
+                "type": "str"
+            },
+            {
+                "label": "Intrusione",
+                "value": "PERICOLO",
+                "type": "str"
+            },
+            {
+                "label": "Tentativo",
+                "value": "SOSPETTO",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "user_tag",
+        "topicType": "msg",
+        "className": "",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "bd3ce0fd4f5f6f19"
+            ]
+        ]
+    },
+    {
+        "id": "bd3ce0fd4f5f6f19",
+        "type": "change",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "currentTag",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f43d87ca4237a02",
+        "type": "ui_numeric",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "label": "Soglia Accelerometro (G)",
+        "tooltip": "",
+        "group": "301a06f0c7c19d41",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "th_accel",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0.5,
+        "max": 5,
+        "step": 0.1,
+        "className": "",
+        "x": 270,
+        "y": 740,
+        "wires": [
+            [
+                "d8bb4e2a4fd05daa"
+            ]
+        ]
+    },
+    {
+        "id": "d8bb4e2a4fd05daa",
+        "type": "function",
+        "z": "02b90a95fb708b01",
+        "name": "Save Global",
+        "func": "global.set(msg.topic, msg.payload);\n\n// Output 1: toast di conferma\nvar toast = { payload: \"Soglia accelerometro aggiornata a \" + msg.payload };\n\n// Output 2: comando MQTT verso ESP32\nvar mqttCmd = {\n    topic: \"casa/caveau/cmd\",\n    payload: \"SOG=\" + msg.payload\n};\n\nreturn [toast, mqttCmd];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "5e1b522ebeda5a23"
+            ],
+            [
+                "71c7099e8f90aafc"
+            ]
+        ]
+    },
+    {
+        "id": "5e1b522ebeda5a23",
+        "type": "ui_toast",
+        "z": "02b90a95fb708b01",
+        "position": "top right",
+        "displayTime": "2",
+        "highlight": "",
+        "outputs": 0,
+        "name": "",
+        "x": 690,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "190682af06d62fcd",
+        "type": "mqtt in",
+        "z": "02b90a95fb708b01",
+        "name": "WiFi",
+        "topic": "casa/caveau/telemetry/wifi",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "555b57a316896058",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "8f52a6e19c1590b9",
+                "1334fa174a53c7ec"
+            ]
+        ]
+    },
+    {
+        "id": "8f52a6e19c1590b9",
+        "type": "ui_chart",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "bbc1887405f03dfd",
+        "order": 1,
+        "width": 6,
+        "height": 5,
+        "label": "Segnale WiFi (dBm)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-100",
+        "ymax": "0",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#9c9f0f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1334fa174a53c7ec",
+        "type": "ui_gauge",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "bbc1887405f03dfd",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "gtype": "gage",
+        "title": "WiFi",
+        "label": "dBm",
+        "format": "{{value}}",
+        "min": "-100",
+        "max": "0",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7dd883fbb3932790",
+        "type": "ui_button",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "f056c1e4cd611e29",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "OPEN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-up",
+        "payload": "FINESTRA=OPEN",
+        "payloadType": "str",
+        "topic": "casa/caveau/cmd",
+        "topicType": "msg",
+        "x": 710,
+        "y": 60,
+        "wires": [
+            [
+                "71c7099e8f90aafc"
+            ]
+        ]
+    },
+    {
+        "id": "59a21e4ed5edca99",
+        "type": "ui_button",
+        "z": "02b90a95fb708b01",
+        "name": "",
+        "group": "f056c1e4cd611e29",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "CLOSE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-down",
+        "payload": "FINESTRA=CLOSE",
+        "payloadType": "str",
+        "topic": "casa/caveau/cmd",
+        "topicType": "msg",
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "71c7099e8f90aafc"
+            ]
+        ]
+    },
+    {
+        "id": "c2b5d530769c9d0d",
+        "type": "ui_template",
+        "z": "02b90a95fb708b01",
+        "group": "f056c1e4cd611e29",
+        "name": "Stato Tenda",
+        "order": 4,
+        "width": 6,
+        "height": 3,
+        "format": "<div style=\"text-align:center; padding:25px;\">\n\n  <!-- Apertura in corso -->\n  <div ng-if=\"msg.payload == 'apertura'\">\n    <i class=\"fa fa-arrow-up fa-spin\" \n       style=\"color:#ff9800; font-size:60px; margin-bottom:10px;\"></i>\n    <div style=\"font-size:26px; font-weight:bold;\">Apertura in corso...</div>\n  </div>\n\n  <!-- Chiusura in corso -->\n  <div ng-if=\"msg.payload == 'chiusura'\">\n    <i class=\"fa fa-arrow-down fa-spin\" \n       style=\"color:#2196f3; font-size:60px; margin-bottom:10px;\"></i>\n    <div style=\"font-size:26px; font-weight:bold;\">Chiusura in corso...</div>\n  </div>\n\n  <!-- Tenda aperta -->\n  <div ng-if=\"msg.payload == 'aperta'\">\n    <i class=\"fa fa-check-circle\" \n       style=\"color:#4caf50; font-size:60px; margin-bottom:10px;\"></i>\n    <div style=\"font-size:26px; font-weight:bold;\">Tenda Aperta</div>\n  </div>\n\n  <!-- Tenda chiusa -->\n  <div ng-if=\"msg.payload == 'chiusa'\">\n    <i class=\"fa fa-check-circle\" \n       style=\"color:#4caf50; font-size:60px; margin-bottom:10px;\"></i>\n    <div style=\"font-size:26px; font-weight:bold;\">Tenda Chiusa</div>\n  </div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e804f5a01987aa0",
+        "type": "mqtt in",
+        "z": "02b90a95fb708b01",
+        "name": "MQTT Tenda",
+        "topic": "casa/caveau/telemetry/tenda",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "555b57a316896058",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 70,
+        "y": 920,
+        "wires": [
+            [
+                "c2b5d530769c9d0d"
+            ]
+        ]
+    },
+    {
+        "id": "08e10a91fc7a6a32",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SecurityDB",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "3e319e41f165e5a2"
+            ]
+        ]
+    },
+    {
+        "id": "54d3f399efca3552",
+        "type": "ui_button",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "group": "97b852d6b07e7b1d",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "CARICA LOG",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "SELECT * FROM logs ORDER BY rowid DESC LIMIT 25",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "dd460fcc420e7ae3"
+            ]
+        ]
+    },
+    {
+        "id": "2178720819dc0b60",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite lettura",
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "de2ce0f4fe417a4c"
+            ]
+        ]
+    },
+    {
+        "id": "cec0fc3201b07377",
+        "type": "ui_template",
+        "z": "ba047f83c3e4f540",
+        "group": "97b852d6b07e7b1d",
+        "name": "",
+        "order": 4,
+        "width": 12,
+        "height": 5,
+        "format": "<div style=\"background:#1a1a1a; color:white; padding:10px; border-radius:5px; font-family:sans-serif;\">\n    <h3 style=\"color:#2ca591; margin-top:0;\">Storico Eventi</h3>\n    <table style=\"width:100%; text-align:left; border-collapse:collapse;\">\n        <thead>\n            <tr style=\"border-bottom:2px solid #2ca591; color:#2ca591;\">\n                <th style=\"padding:8px;\">Data</th>\n                <th style=\"padding:8px;\">Evento</th>\n                <th style=\"padding:8px;\">Sensore</th>\n                <th style=\"padding:8px;\">Tag</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"r in msg.payload | limitTo:25\" style=\"border-bottom:1px solid #333;\">\n                <td style=\"padding:8px; font-size:0.9em;\">{{r.timestamp}}</td>\n                <td style=\"padding:8px;\">{{r.event}}</td>\n                <td style=\"padding:8px;\">{{r.sensor}}</td>\n                <td style=\"padding:8px;\">\n                    <span ng-style=\"{'color': r.criticality === 'PERICOLO' ? '#ff4d4d' : 'white'}\">\n                        {{r.criticality}}\n                    </span>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div ng-if=\"msg.payload.length === 0\" style=\"padding:20px; text-align:center; color:#666;\">\n        Nessun log presente nel database\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e319e41f165e5a2",
+        "type": "debug",
+        "z": "ba047f83c3e4f540",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "dd460fcc420e7ae3",
+        "type": "change",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "2178720819dc0b60"
+            ]
+        ]
+    },
+    {
+        "id": "de2ce0f4fe417a4c",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "funzione tabella",
+        "func": "if (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = msg.payload.filter(r => r.timestamp !== null);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "cec0fc3201b07377"
+            ]
+        ]
+    },
+    {
+        "id": "f8dfb2faa8bcd8c6",
+        "type": "ui_button",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "group": "107e4c7cccb1381e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Archiavia e reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "close",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "ce137e7d339d6193"
+            ]
+        ]
+    },
+    {
+        "id": "ce137e7d339d6193",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "Verifica Archiviazione",
+        "func": "// Lock salvataggio\nvar alarm = global.get('pendingAlarm');\nvar tag = global.get('currentTag');\nvar isActive = flow.get('alarmActive') || false;\n\nif (isActive) {\n    return [null, { payload: \"⚠️ Errore: Disarma il sistema prima di archiviare!\" }];\n}\n\nif (!alarm) {\n    return [null, { payload: \"⚠️ Nessun allarme da archiviare.\" }];\n}\n\nif (!tag) {\n    return [null, { payload: \"⚠️ Seleziona una criticità prima di archiviare.\" }];\n}\n\n\n// Normalizza la modalità\nvar modeNorm = alarm.mode;\n\nif (modeNorm !== \"NIGHT\") {\n    modeNorm = \"TOTAL\";\n}\n\n// Messaggio PULITO verso DB\nreturn [{\n    _db: true,\n    event: alarm.event,\n    sensor: alarm.sensor,\n    mode: modeNorm,\n    criticality: tag\n}, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "b6295be5ac1523e1"
+            ],
+            [
+                "60d078b5f01014d8"
+            ]
+        ]
+    },
+    {
+        "id": "9f37d67b87accb65",
+        "type": "inject",
+        "z": "ba047f83c3e4f540",
+        "name": "Init DB",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE IF NOT EXISTS logs (id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT, event TEXT, sensor TEXT, mode TEXT, criticality TEXT)",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "ebf4c9b99aa965ae"
+            ]
+        ]
+    },
+    {
+        "id": "ebf4c9b99aa965ae",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Create Table",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6295be5ac1523e1",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "Dati tab",
+        "func": "if (!msg._db) return null;\n\n// Local Italian Time\nvar dateStr = new Date().toLocaleString('it-IT', { \n    timeZone: 'Europe/Rome', \n    day: '2-digit', \n    month: '2-digit', \n    year: 'numeric', \n    hour: '2-digit', \n    minute: '2-digit', \n    second: '2-digit' \n});\n\nvar evento = \"MOVIMENTO RILEVATO\";\n\nvar parts = [\n    \"'\" + dateStr + \"'\",\n    \"'\" + evento  + \"'\",\n    \"'\" + (msg.sensor || \"\") + \"'\",\n    \"'\" + (msg.mode || \"\") + \"'\",\n    \"'\" + (msg.criticality || \"\") + \"'\"\n];\n\nmsg.topic = \"INSERT INTO logs (timestamp, event, sensor, mode, criticality) VALUES (\" + parts.join(\",\") + \")\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "a37e14046a536466"
+            ]
+        ]
+    },
+    {
+        "id": "a37e14046a536466",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Insert Log",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "da6d24764a79ca0d"
+            ]
+        ]
+    },
+    {
+        "id": "da6d24764a79ca0d",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "Salvatggio",
+        "func": "global.set('pendingAlarm', null);\nglobal.set('currentTag', null);\nmsg = {\n    payload: \"✅ Salvato\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "0d1a09fbb09af56a"
+            ]
+        ]
+    },
+    {
+        "id": "0d1a09fbb09af56a",
+        "type": "ui_toast",
+        "z": "ba047f83c3e4f540",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1090,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "60d078b5f01014d8",
+        "type": "ui_toast",
+        "z": "ba047f83c3e4f540",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 430,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7576d5cdfc948e60",
+        "type": "ui_button",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "group": "97b852d6b07e7b1d",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Aggiorna Grafici",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-bar-chart",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "SELECT criticality, COUNT(*) as count FROM logs WHERE criticality IS NOT NULL GROUP BY criticality",
+        "topicType": "str",
+        "x": 100,
+        "y": 580,
+        "wires": [
+            [
+                "d9d787188e0e9c54",
+                "c78325b37199bd2d",
+                "4b6992add68d2847"
+            ]
+        ]
+    },
+    {
+        "id": "d9d787188e0e9c54",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Get Stats",
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "96ec59e4c09999d9"
+            ]
+        ]
+    },
+    {
+        "id": "96ec59e4c09999d9",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "Format Chart",
+        "func": "var labels = [];\nvar data = [];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload.forEach(function(row) {\n        labels.push(row.criticality);\n        data.push(row.count);\n    });\n}\n\nmsg.payload = [{\n    \"series\": [\"Eventi\"],\n    \"data\": [data],\n    \"labels\": labels\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "860542c0c61c5fda"
+            ]
+        ]
+    },
+    {
+        "id": "860542c0c61c5fda",
+        "type": "ui_chart",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "group": "bf2b8ec2e741bfef",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "Distribuzione Criticità",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#9c9f0f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 640,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88b41036a928b07e",
+        "type": "ui_button",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "group": "97b852d6b07e7b1d",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "PULISCI REGISTRO",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-trash",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "DELETE FROM logs;",
+        "topicType": "str",
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "d6c7abf14ec11b85"
+            ]
+        ]
+    },
+    {
+        "id": "d6c7abf14ec11b85",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Clean DB",
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [
+                "86228703421e7c56"
+            ]
+        ]
+    },
+    {
+        "id": "86228703421e7c56",
+        "type": "ui_toast",
+        "z": "ba047f83c3e4f540",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 480,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "edeec1ae5e40f703",
+        "type": "change",
+        "z": "ba047f83c3e4f540",
+        "name": "Refresh Table",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT * FROM logs ORDER BY rowid DESC LIMIT 25",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 680,
+        "wires": [
+            [
+                "2178720819dc0b60"
+            ]
+        ]
+    },
+    {
+        "id": "8c0a1bd8592753f0",
+        "type": "change",
+        "z": "ba047f83c3e4f540",
+        "name": "Refresh Stats",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT criticality, COUNT(*) as count FROM logs WHERE criticality IS NOT NULL GROUP BY criticality",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "d9d787188e0e9c54",
+                "c78325b37199bd2d",
+                "4b6992add68d2847"
+            ]
+        ]
+    },
+    {
+        "id": "8236bdaa85c40c16",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "funzione sensori",
+        "func": "var labels = [];\nvar data = [];\nmsg.payload.forEach(function(row) {\n    labels.push(row.sensor);\n    data.push(row.count);\n});\nmsg.payload = [{\n    \"series\": [\"Allarmi per Sensore\"],\n    \"data\": [data],\n    \"labels\": labels\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 820,
+        "wires": [
+            [
+                "d911318f15d09892"
+            ]
+        ]
+    },
+    {
+        "id": "d911318f15d09892",
+        "type": "ui_chart",
+        "z": "ba047f83c3e4f540",
+        "name": "Distribuzione Sensori",
+        "group": "bf2b8ec2e741bfef",
+        "order": 2,
+        "width": 10,
+        "height": 6,
+        "label": "Distribuzione Sensori",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "595db05b6dc422d9",
+        "type": "ui_chart",
+        "z": "ba047f83c3e4f540",
+        "name": "Distribuzione Modalità",
+        "group": "d72aed64caac9e36",
+        "order": 1,
+        "width": 12,
+        "height": 6,
+        "label": "Distribuzione Modalità",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc2a0bad07996e09",
+        "type": "function",
+        "z": "ba047f83c3e4f540",
+        "name": "funzione modalità",
+        "func": "var labels = [];\nvar data = [];\n\nmsg.payload.forEach(function(row) {\n    labels.push(row.mode);\n    data.push(row.count);\n});\n\nmsg.payload = [{\n    series: [\"Modalità\"],\n    data: [data],\n    labels: labels\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 880,
+        "wires": [
+            [
+                "595db05b6dc422d9"
+            ]
+        ]
+    },
+    {
+        "id": "c78325b37199bd2d",
+        "type": "change",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT sensor, COUNT(*) as count FROM logs GROUP BY sensor",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 820,
+        "wires": [
+            [
+                "3b98d82a9b309454"
+            ]
+        ]
+    },
+    {
+        "id": "4b6992add68d2847",
+        "type": "change",
+        "z": "ba047f83c3e4f540",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT mode, COUNT(*) as count FROM logs WHERE mode IS NOT NULL GROUP BY mode",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 880,
+        "wires": [
+            [
+                "42cd03495fabdf32"
+            ]
+        ]
+    },
+    {
+        "id": "3b98d82a9b309454",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Get Sensor Stats",
+        "x": 500,
+        "y": 820,
+        "wires": [
+            [
+                "8236bdaa85c40c16"
+            ]
+        ]
+    },
+    {
+        "id": "42cd03495fabdf32",
+        "type": "sqlite",
+        "z": "ba047f83c3e4f540",
+        "mydb": "security_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Get Mode Stats",
+        "x": 500,
+        "y": 880,
+        "wires": [
+            [
+                "bc2a0bad07996e09"
+            ]
+        ]
+    },
+    {
+        "id": "d8985e7dbd091bf9",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-sqlite": "1.1.1",
+            "node-red-contrib-telegrambot": "17.0.3"
+        }
+    }
+]
